@@ -1,10 +1,9 @@
 [Unit]
-Description=Run cfddns.service daily
+Description=Run cfddns.service every 5 minutes
 
 [Timer]
-OnCalendar=daily
-Persistent=true
-Unit=cfddns.service
+OnUnitActiveSec=300s
+OnBootSec=300s
 
 [Install]
 WantedBy=timers.target
